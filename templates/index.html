@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+ <div class="login">
+    <h1>Fiyat Tahmini Uygulaması</h1>
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+       <br>
+       <br>
+        <span class="color-picker"></span>
+
+        <br/><br/>
+
+        <span class="custom-dropdown big">
+            <select id="urun" name="urun">
+                <option value="" disabled="disabled"  style="display:none" selected="selected">Urun secimi..</option>
+                {%for i in range(0, 79)%}
+                    <option value={{urunler[i]}}>{{urunler[i]}}</option>
+                {%endfor%}
+
+            </select>
+        </span>
+       <br><br><br><br><br>
+        <!--<button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>-->
+        <button type="submit" class="button">Tahminle!</button>
+    </form>
+
+
+ </div>
+
+
+</body>
+</html>
