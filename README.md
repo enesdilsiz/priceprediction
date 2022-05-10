@@ -1,6 +1,8 @@
 ## ML Model Visualization Flask Deployment
 This is a demo project to elaborate how Machine Learn Models are deployed on production using Flask API
 
+![Screenshot](app_home.jpg)
+
 ### Prerequisites
 You must have Scikit Learn, Plotly, Pandas (for Machine Leraning Model) and Flask (for API) installed.
 
