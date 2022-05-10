@@ -49,8 +49,8 @@ def predict():
     print(product_name)
     print('######################################')
 
-    results = pd.read_csv(r'C:\Users\enesd\Desktop\priceprediction\webapp\data\predictions.csv', index_col='tarih')
-    real = pd.read_csv(r'C:\Users\enesd\Desktop\priceprediction\webapp\data\realdata.csv', index_col='tarih')
+    results = pd.read_csv('data/predictions.csv', index_col='tarih')
+    real = pd.read_csv('data/realdata.csv', index_col='tarih')
     results2 = results[results['ürün'] == product_name]
     temp = real[real["ürün"] == product_name]
     whole = temp.groupby(temp.index).mean()
