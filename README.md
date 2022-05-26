@@ -1,15 +1,18 @@
-## ML Model Visualization Flask Deployment
-This is a demo project to elaborate how Machine Learn Models are deployed on production using Flask API
+## Price Prediction Web App
+This project aims to visualize both real and predicted prices of products. 
+Statistical methods and machine learning models were used to predict to product prices. 
+Plotly was used to visualize the prices. The project is deployed using Flask API.
 
-![Screenshot](app_home.jpg)
+![Screenshot](app-home.jpg)
+![Screenshot](app-graph.jpg
 
 ### Prerequisites
 You must have Scikit Learn, Plotly, Pandas (for Machine Leraning Model) and Flask (for API) installed.
 
 ### Project Structure
 This project has two major parts :
-app.py - This contains Flask APIs that receives employee details through GUI or API calls, computes the precited value based on our model and returns it.
-templates - This folder contains the HTML template to allow user to enter employee detail and displays the predicted employee salary.
+app.py - This contains Flask APIs that plot the garphs.
+templates - This folder contains the HTML templates.
 
 ### Running the project
 
