@@ -4,7 +4,8 @@ Statistical methods and machine learning models were used to predict to product 
 Plotly was used to visualize the prices. The project is deployed using Flask API.
 
 ![Screenshot](app-home.jpg)
-![Screenshot](app-graph.jpg
+
+![Screenshot](app-graph.jpg)
 
 ### Prerequisites
 You must have Scikit Learn, Plotly, Pandas (for Machine Leraning Model) and Flask (for API) installed.
