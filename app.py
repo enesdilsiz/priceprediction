@@ -1,7 +1,6 @@
 import numpy as np
 import plotly.utils
 from flask import Flask, request, jsonify, render_template
-#import pickle
 import pandas as pd
 import plotly
 import plotly.graph_objects as go
@@ -18,7 +17,6 @@ pio.renderers.default = 'browser'
 """
 
 app = Flask(__name__)
-#model = pickle.load(open('model.pkl', 'rb'))
 
 urunler = ['kıyma', 'tavuk', 'hindi', 'Bakla-kuru', 'Bakla-taze', 'Bamya',
                'Barbunya-kuru', 'Bezelye-taze', 'Biber-yeşil', 'Brüksel laha.',
@@ -36,12 +34,12 @@ urunler = ['kıyma', 'tavuk', 'hindi', 'Bakla-kuru', 'Bakla-taze', 'Bamya',
                'Üzüm', 'Vişne', 'fındık', 'fıstık', 'kaju', 'badem', 'ceviz']
 
 
-@app.route('/')
+@app.route('/predict/')
 def home():
-    return render_template('index.html', urunler=urunler)
+    return render_template('templates/index.html', urunler=urunler)
 
 
-@app.route('/',methods=['POST'])
+@app.route('/predict/',methods=['POST'])
 def predict():
 
     product_name = request.form['urun']
@@ -99,7 +97,7 @@ def predict():
     #fig.show()
     fig.write_html('figure.html', auto_open=True)
 
-    return render_template('index.html', urunler=urunler)
+    return render_template('templates/index.html', urunler=urunler)
 
 
 
