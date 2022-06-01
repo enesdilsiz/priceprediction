@@ -2,3 +2,4 @@ flask
 gunicorn
 plotly
 pandas
+numpy
