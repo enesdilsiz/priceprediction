@@ -33,11 +33,11 @@ urunler = ['kıyma', 'tavuk', 'hindi', 'Bakla-kuru', 'Bakla-taze', 'Bamya',
                'Kiraz', 'Limon', 'Mandalina', 'Muz', 'Nar', 'Portakal', 'Şeftali',
                'Üzüm', 'Vişne', 'fındık', 'fıstık', 'kaju', 'badem', 'ceviz']
 
-
+"""
 @app.route('/predict/')
 def home():
     return render_template('templates/index.html', urunler=urunler)
-
+"""
 
 @app.route('/predict/',methods=['POST'])
 def predict():
