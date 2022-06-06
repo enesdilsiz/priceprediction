@@ -39,7 +39,7 @@ def home():
     return render_template('templates/index.html', urunler=urunler)
 """
 
-@app.route('/predict/',methods=['POST'])
+@app.route('/',methods=['POST'])
 def predict():
 
     product_name = request.form['urun']
@@ -97,7 +97,7 @@ def predict():
     #fig.show()
     fig.write_html('figure.html', auto_open=True)
 
-    return render_template('templates/index.html', urunler=urunler)
+    return render_template('index.html', urunler=urunler)
 
 
 
