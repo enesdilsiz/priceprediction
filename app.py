@@ -7,7 +7,7 @@ import plotly.graph_objects as go
 import plotly.io as pio
 
 
-pio.renderers.default = 'browser'
+#pio.renderers.default = 'browser'
 
 """     ['plotly_mimetype', 'jupyterlab', 'nteract', 'vscode',
          'notebook', 'notebook_connected', 'kaggle', 'azure', 'colab',
